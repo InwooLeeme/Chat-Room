@@ -1,0 +1,29 @@
+{
+  "name": "chat-room",
+  "version": "1.0.0",
+  "description": "Make a Chatting room using socket.io and express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js --delay 2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InwooLeeme/Chat-Room.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InwooLeeme/Chat-Room/issues"
+  },
+  "homepage": "https://github.com/InwooLeeme/Chat-Room#readme",
+  "dependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/node": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
