@@ -4,6 +4,7 @@ Make a Chatting room using socket.io and express.js
 
 # To Do
 
-- [ ] Modules Set up
-- [ ] Express Set up
+- [x] Modules Set up
+- [x] Express Set up
 - [ ] Socket.io Set up
+- [ ] Set Nickname in main page.
