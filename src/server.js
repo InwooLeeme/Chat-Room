@@ -11,13 +11,15 @@ const PORT = 5000;
 
 const home = (req, res) => res.render("home")
 
-app.set("views", join(__dirname,"views"));
-app.set('view engine', 'pug');
 app.use(helmet());
 app.use(morgan('dev'));
+app.set("views", join(__dirname,"views"));
+app.set('view engine', 'pug');
 app.use(express.static(join(__dirname,"static")));
 app.get("/", home)
 
 const server = app.listen(PORT, () => console.log(`Server is Running on PORT :${PORT}`));
 
-const io = socketIO.listen(server);
+const io = socketIO(server);
+
+io.on("connection",() => console.log(`Somebody is connected!`));

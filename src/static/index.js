@@ -1,1 +1,2 @@
-For Test
+// Client side
+io("/")
