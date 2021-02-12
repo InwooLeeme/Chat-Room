@@ -12,4 +12,4 @@ Make a Chatting room using socket.io and express.js
 - [x] Gulp watch task.
 - [x] Gulp autoprefixer task.
 - [x] Gulp minifiy task.
-- [ ] Gulp babel task.
+- [x] Gulp babel task.
