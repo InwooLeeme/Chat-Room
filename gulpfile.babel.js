@@ -1,7 +1,6 @@
 'use strict';
 import gulp from "gulp";
 import sass from "gulp-sass";
-import del from "del";
 
 sass.compiler = require('node-sass');
 
@@ -20,6 +19,7 @@ export function styles(){
 function watchFiles(){
     gulp.watch(routes.style.watch, styles);
 }
+
 
 const dev = gulp.series([styles, watchFiles]);
 
