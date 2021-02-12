@@ -1,6 +1,8 @@
 'use strict';
 import gulp from "gulp";
 import sass from "gulp-sass";
+import autoprefixer from "gulp-autoprefixer";
+import miniCss from "gulp-csso";
 
 sass.compiler = require('node-sass');
 
@@ -12,8 +14,10 @@ const routes = {
     }
 }
 
-export function styles(){
-    return gulp.src(routes.style.src).pipe(sass.sync().on('error', sass.logError)).pipe(gulp.dest(routes.style.dest))
+function styles(){
+    return gulp.src(routes.style.src).pipe(sass.sync().on('error', sass.logError)).pipe(autoprefixer({
+        cascade:false
+    })).pipe(miniCss()).pipe(gulp.dest(routes.style.dest))
 }
 
 function watchFiles(){

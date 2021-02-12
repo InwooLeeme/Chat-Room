@@ -8,4 +8,8 @@ Make a Chatting room using socket.io and express.js
 - [x] Express Set up
 - [ ] Socket.io Set up
 - [ ] Set Nickname in main page.
-- [ ] Gulp Sass task.
+- [x] Gulp Sass task.
+- [x] Gulp watch task.
+- [x] Gulp autoprefixer task.
+- [x] Gulp minifiy task.
+- [ ] Gulp babel task.
