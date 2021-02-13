@@ -1,8 +1,7 @@
 // Client Side
+// Front End
 
 const body = document.querySelector("body");
-const display = document.querySelector(".chatDisplay");
-const jsForm = document.querySelector(".jsForm");
 const registerForm = document.querySelector(".registerForm");
 const nicknameInput = registerForm.querySelector("input");
 const chatForm = document.querySelector(".chatForm");
@@ -14,8 +13,8 @@ const LOGGEDIN = "loggedIn";
 const confirmLI = localStorage.getItem(NICKNAME);
 
 const logIn = (nickname) => {
-    const socket = io("/");         // 연결
-    socket.emit("setNickname", {nickname});     // nickname을 이벤트로 전송
+    window.socket = io("/");         // 연결
+    window.socket.emit(window.events.setNickname, {nickname});     // nickname을 이벤트로 전송
 }
 
 const askNickName = () => {
