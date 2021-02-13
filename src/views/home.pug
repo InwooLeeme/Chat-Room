@@ -7,9 +7,14 @@ html(lang="en")
         title Chat Room
         link(rel="stylesheet", href="/styles/styles.css")
     body
-        ul.chatDisplay
-        form#jsForm
-            input(type="text", placeholder="Type something")
-            button(type="submit")|전송
+        .registerForm 
+            h1 Set your NickName 
+            form
+                input(type="text", placeholder="Set ur NickName")
+        .chatForm
+            ul.chatDisplay
+            form.jsForm
+                input(type="text")
+                button(type="submit")|전송
         script(src="/socket.io/socket.io.js")
         script(src="/js/main.js")

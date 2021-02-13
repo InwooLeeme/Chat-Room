@@ -1,12 +1,19 @@
 @import "variables.scss";
 @import "form.scss";
 @import "reset.scss";
+@import "register.scss";
 
 body {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+#loggedOut {
+  display: none;
+}
+
+#loggedIn {
+  display: block;
 }
