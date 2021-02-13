@@ -22,8 +22,9 @@ const server = app.listen(PORT, () => console.log(`Server is Running on PORT :${
 
 const io = socketIO(server);
 
-io.on("connection", socket =>{
-    socket.on("newMessage", (data) => {
-        socket.broadcast.emit("messageNotif",{message});
+io.on("connection", socket => {
+    socket.on("setNickname", ({nickname}) => {
+        console.log(nickname);
+        socket.nickname = nickname;
     });
 });
