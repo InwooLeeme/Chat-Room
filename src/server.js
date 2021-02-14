@@ -27,7 +27,9 @@ const io = socketIO(server);
 
 io.on("connection", socket => {
     socket.on(events.setNickname, ({nickname}) => {
-        console.log(nickname);
         socket.nickname = nickname;
+    });
+    socket.on(events.sendMsg, ({message}) => {
+        socket.broadcast.emit(events.newMsg, {message, nickname:socket.nickname});
     });
 });
