@@ -24,8 +24,9 @@ const displayMessage = (message, nickname) => {
     const minute = timeInfo.minute;
     const li = document.createElement("li");
     li.innerHTML = `
+    <div class="author">${nickname}</div>
+    <span class="messageContent">${message}</span>
     <span class="time">${hour}:${minute}</span>
-    <span class="author">${nickname}:${message}</span>
     `;
     displayChat.appendChild(li);
 }
