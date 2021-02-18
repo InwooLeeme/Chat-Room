@@ -14,3 +14,4 @@ Make a Chatting room using socket.io and express.js
 - [x] Gulp minifiy task.
 - [x] Gulp babel task.
 - [x] Chat Room Design.
+- [x] Chat Animation.
